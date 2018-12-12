@@ -3,8 +3,8 @@ Exam 1, problem 3.
 
 Authors: David Mutchler, Vibha Alangar, Matt Boutell, Dave Fisher,
          Mark Hays, Amanda Stouder, Aaron Wilkin, their colleagues,
-         and PUT_YOUR_NAME_HERE.
-"""  # TODO: 1. PUT YOUR NAME IN THE ABOVE LINE.
+         and Christina Rogers.
+"""  # DONE: 1. PUT YOUR NAME IN THE ABOVE LINE.
 
 import testing_helper
 import time
@@ -163,7 +163,7 @@ def problem3a(r, s):
           -- 5 cubed is   125, whose sum of digits is  8, which is NOT odd.
     """
     # -------------------------------------------------------------------------
-    # TODO: 3. Implement and test this function.
+    # DONE: 3. Implement and test this function.
     #          Tests have been written for you (above).
     #
     ###########################################################################
@@ -172,6 +172,11 @@ def problem3a(r, s):
     #    **  use (call) the   sum_of_digits   function
     #    **  that is DEFINED ABOVE.
     ###########################################################################
+    total = 0
+    for k in range(r,s+1, 1):
+        if (sum_of_digits(k**3)%2==1):
+            total = total + k
+    return total
 
 
 def run_test_problem3b():
@@ -280,10 +285,13 @@ def problem3b(m, r):
            which is approximately 12.020144157845959.
      """
     ###########################################################################
-    # TODO: 4. Implement and test this function.
+    # DONE: 4. Implement and test this function.
     #          Tests have been written for you (above).
     ###########################################################################
-
+    total = 0
+    for k in range(m):
+        total = total + (k+1)/((r+k)**(k+1))
+    return total
 
 ###############################################################################
 # Our tests use the following to print error messages in red.
